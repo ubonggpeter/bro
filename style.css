@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: 'Hubot Sans', sans-serif;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+  border-bottom: 17px solid #ad5151;
+  margin: 20px auto;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Gradient overlay */
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(165, 42, 42, 0.6));
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card h2 {
+  margin: 10px 0 5px;
+  text-align: center;
+}
+
+.card p {
+  color: #000;
+  margin: 0 20px 20px;
+  text-align: left;
+}
+
+.input-group {
+  margin: 20px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #aaa7a7;
+  color: #000;
+  font-size: 17px;
+  box-sizing: border-box;
+  font-family: 'Hubot Sans', sans-serif;
+}
+
+input::placeholder {
+  color: #444141;
+  font-family: 'Hubot Sans', sans-serif;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  margin: 20px;
+  font-family: 'Hubot Sans', sans-serif;
+  flex-wrap: wrap;
+}
+
+.custom-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  color: white;
+  min-width: 180px;
+  flex: 1;
+  font-size: 17px;
+  font-family: 'Hubot Sans', sans-serif;
+}
+
+.full-width-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 20px;
+  margin-top: -10px;
+}
+
+.full-width-dropdown select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.full-width-dropdown label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  font-family: 'Hubot Sans', sans-serif;
+}
+
+.signup-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.signup-button {
+  width: 95%;
+  padding: 12px;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px auto 20px;
+  font-size: 17px;
+  font-family: 'Hubot Sans', sans-serif;
+  display: block;
+}
+
+.signup-button:hover {
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .dropdown-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card {
+    margin: 10px;
+  }
+
+  .image-wrapper {
+    padding-top: 66.66%; /* Slightly taller for mobile, like 3:2 */
+  }
+}
